@@ -1,0 +1,36 @@
+header {
+    color: violet;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+header p{
+    color: black;
+    float: right;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.main-title h1{
+    font-size: 50px;
+}
+
+.answers{
+    font-size: 25px;
+    list-style: none;
+}
+ 
+.answer-choices{
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 25px;
+    margin: 5px;
+    width: 15%;
+    text-align: left;
+    border-radius: 10px;
+}
+ .answer-choices:hover{
+     background-color: violet;
+ }

@@ -1,15 +1,22 @@
-var seconds=60;
-var timer;
-function myFunction() {
-  if(seconds < 60) { // I want it to say 1:00, not 60
-    document.getElementById("demo").innerHTML = seconds;
-  }
-  if (seconds >0 ) { // so it doesn't go to -1
-     seconds--;
-  } else {
-     clearInterval(timer);
-     alert("OUT OF TIME!");
-  }
-}
+const timeH = document.querySelector('p');
+let timeSecond = 59;
 
-document.getElementById("demo").innerHTML="Time: 60";
+displayTime(timeSecond)
+
+const countDown = setInterval (()=>{
+    timeSecond--;
+    displayTime(timeSecond);
+    if(timeSecond <= 0 || timeSecond < 1){
+        endTime();
+        clearInterval(countDown);
+    }
+},1000)
+
+function displayTime(second){
+    const min = Math.floor (second / 60);
+    const sec = Math.floor (second % 60);
+    timeH.innerHTML = `${min<10 ? '0':''}${min}:${sec<10?'0':''}${sec}`
+}
+function endTime(){
+    timeH.innerHTML = 'OUT OF TIME'
+}

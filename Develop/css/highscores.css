@@ -1,0 +1,26 @@
+.scores{
+    text-align: center;
+    padding: 150px;
+}
+.scores h1{
+    font-size: 50px;
+}
+
+.scores p{
+    background-color: #CBC3E3;
+    color: black;
+    width: 30%;
+    text-align: left;
+    margin-left: 35%;
+    font-size: 25px;
+}
+
+.scores button{
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 18px;
+}
+
+.scores button:hover{
+    background-color: violet;
+}

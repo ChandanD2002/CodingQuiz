@@ -15,8 +15,15 @@ const countDown = setInterval (()=>{
 function displayTime(second){
     const min = Math.floor (second / 60);
     const sec = Math.floor (second % 60);
-    timeH.innerHTML = `${min<10 ? '0':''}${min}:${sec<10?'0':''}${sec}`
+    timeH.innerHTML = `${min<10 ? '0':''}${min}:${sec<10?'0':''}${sec}`;
+
+    if (timeSecond < 0){
+        window.location.href = "file:///Users/ChandanD/Desktop/CodingQuiz/Develop/outoftime.html";
+    }
 }
-function endTime(){
-    timeH.innerHTML = 'OUT OF TIME'
+
+
+function wrongAnswer(){
+    window.alert("Wrong answer! Try again!");
+    timeSecond = Math.max(0, timeSecond-10);
 }
